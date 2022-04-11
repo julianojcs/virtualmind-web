@@ -1,5 +1,7 @@
-// export const baseURL = 'http://localhost:3333'
-export const baseURL = 'https://virtualmind-api.herokuapp.com'
+export const baseURL =
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:3333'
+    : 'https://virtualmind-api.herokuapp.com'
 
 export const QUESTIONS_GET = () => {
   return {

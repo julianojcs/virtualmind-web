@@ -91,7 +91,7 @@ input {
   justify-content: center;
 }
 
-.command_button {
+.btn {
   display: flex;
   align-items: center;
   width: 15rem;
@@ -100,15 +100,31 @@ input {
   border: 0;
   line-height: 2rem;
   border-radius: 5px;
+  outline: none;
+  user-select: none;
+  }
+
+  .btn_command {
   background-color: var(--clr-darkgray);
   color: var(--clr-lightgray);
   cursor: pointer;
-  outline: none;
 }
 
-.command_button:hover {
-  outline: none;
+.btn:disabled,
+.btn[disabled] {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn:hover {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.btn:disabled:hover,
+.btn[disabled]:hover {
+  box-shadow: none;
 }
 
 .container_center {

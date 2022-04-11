@@ -60,7 +60,11 @@ const App = () => {
     return (
       <div className='container'>
         <img className='logo' src='/virtualmind.png' alt='Virtualmind' />
-        <button className='command_button' onClick={() => getAnswers()}>
+        <button
+          className='btn btn_command'
+          disabled={!!answers}
+          onClick={() => getAnswers()}
+        >
           {loadingAnswers ? 'Loading...' : answers ? 'Done' : 'Get Answers'}
         </button>
         <p className='title'>Javascript</p>
